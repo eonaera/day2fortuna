@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 
@@ -8,9 +8,10 @@ namespace day2fortuna
     {
         static void Main(string[] args)
         {
-            //ChoosePerson();
-            //Riddles();
-            Fortuna();
+            //ChoosePerson(); //пример от Ленчика
+            //Riddles(); //классическое задание
+            //Fortuna(); //проверка на удачу через иф
+            Fortunafor(); //версия проверки на удачу через цикл
         }
         static void ChoosePerson()
         {
@@ -287,6 +288,39 @@ namespace day2fortuna
                 Console.Write("You can live with such luck. ");
             }
         }
-
+        static void Fortunafor()
+        {
+            int fortunecount = 0;
+            bool bansw;
+            List<string> ransw = new List<string>() { "1", "2", "3", "4", "5" };
+            var random = new Random();
+            Console.WriteLine("Hey! I want to check your fortuna. Tell me a number from 1 to 5");
+            for (int i = 0; i < 10; i++)
+            {
+                string answ = Console.ReadLine();
+                if (bansw = answ == ransw[random.Next(ransw.Count)])
+                {
+                    Console.WriteLine("Good! One more:");
+                    fortunecount = fortunecount + 1;
+                }
+                else
+                {
+                    Console.WriteLine("Looser! Try more:");
+                }
+            }
+            Console.Write($"End. Your fortune is " + fortunecount + " from 10. ");
+            if (fortunecount < 4)
+            {
+                Console.Write("bad luck gentleman =( ");
+            }
+            else if (fortunecount > 7)
+            {
+                Console.Write("Share me, please. ");
+            }
+            else
+            {
+                Console.Write("You can live with such luck. ");
+            }
+        }
     }
 }

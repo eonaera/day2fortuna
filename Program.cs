@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 
-namespace day2riddles
+namespace day2fortuna
 {
     class Program
     {
         static void Main(string[] args)
         {
             //ChoosePerson();
-            Riddles();
-            //Fortuna();
+            //Riddles();
+            Fortuna();
         }
         static void ChoosePerson()
         {
@@ -167,7 +168,124 @@ namespace day2riddles
         }
         static void Fortuna()
         {
-
+            int fortunecount = 0;
+            bool bansw;
+            List<string> ransw = new List<string>() { "1", "2", "3", "4", "5"};
+            var random = new Random();
+            Console.WriteLine("Hey! I want to check your fortuna. Tell me a number from 1 to 5");
+            string answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            answ = Console.ReadLine();
+            if (bansw = answ == ransw[random.Next(ransw.Count)])
+            {
+                Console.WriteLine("Good! One more:");
+                fortunecount = fortunecount+1;
+            }
+            else
+            {
+                Console.WriteLine("Looser! Try more:");
+            }
+            Console.Write($"End. Your fortune is "+fortunecount+" from 10. ");
+            if (fortunecount < 4)
+            {
+                Console.Write("So so you good luck gentleman. ");
+            }
+            else if (fortunecount > 7)
+            {
+                Console.Write("Share me, please. ");
+            }
+            else
+            {
+                Console.Write("You can live with such luck. ");
+            }
         }
 
     }
